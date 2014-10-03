@@ -8,7 +8,9 @@ namespace Problem_2.Bank_of_Kurtovo_Konare
 {
     abstract class Account: IAccount
     {
+        private Customer customer;
         private decimal balance;
+        private decimal interestRate;
 
         public Account(Customer customer, decimal balance, decimal interestRate)
         {
@@ -18,21 +20,46 @@ namespace Problem_2.Bank_of_Kurtovo_Konare
         }
 
         //properties
-        public Customer Customer { get; set; }
-
-        public decimal Balance { get; set; }
-
-        public decimal InterestRate { get; set; }
+        public Customer Customer
+        {
+            get
+            {
+                return this.customer;
+            }
+            set
+            {
+                this.customer = value;
+            }
+        }
+        public decimal Balance
+        {
+            get
+            {
+                return this.balance;
+            }
+            set
+            {
+                this.balance = value;
+            }
+        }
+        public decimal InterestRate
+        {
+            get
+            {
+                return this.interestRate;
+            }
+            set
+            {
+                this.interestRate = value;
+            }
+        }
 
         //methods
-        public void Deposit(decimal money)
+        public void DepositMoney(decimal money)
         {
             this.Balance += money;
         }
 
-        decimal CalculateInterest(int months)
-        {
-            return this.Balance * (1 + this.InterestRate * months);
-        }
+        public abstract decimal CalculateInterest(decimal money, int months);
     }
 }

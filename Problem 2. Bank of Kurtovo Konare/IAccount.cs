@@ -8,12 +8,8 @@ namespace Problem_2.Bank_of_Kurtovo_Konare
 {
     interface IAccount
     {
-        public Customer Customer { get; set; }
-        public decimal Balance { get; set; }
-        public decimal InterestRate { get; set; }
+        void DepositMoney(decimal money);
 
-        void Deposit();
-
-        decimal CalculateInterest();
+        decimal CalculateInterest(decimal money, int months);
     }
 }

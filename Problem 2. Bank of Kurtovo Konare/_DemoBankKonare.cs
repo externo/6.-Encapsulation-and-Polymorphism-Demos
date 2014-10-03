@@ -10,6 +10,12 @@ namespace Problem_2.Bank_of_Kurtovo_Konare
     {
         static void Main(string[] args)
         {
+            Deposit depo = new Deposit(Customer.Individual, 12112m, 3.4m);
+            Console.WriteLine(depo.Balance);
+            depo.DepositMoney(100m);
+            Console.WriteLine(depo.Balance);
+            depo.Withdraw(1000m);
+            Console.WriteLine(depo.Balance);
         }
     }
 }

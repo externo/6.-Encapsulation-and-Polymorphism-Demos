@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Problem_2.Bank_of_Kurtovo_Konare
 {
-    class Deposit: Account
+    class Mortgage: Account
     {
         //constructor
-        public Deposit(Customer customer, decimal balance, decimal interestRate)
+        public Mortgage(Customer customer, decimal balance, decimal interestRate)
             : base(customer, balance, interestRate) { }
         
         //methods
         public override decimal CalculateInterest(decimal money, int months)
         {
-            if (money < 1000)
+            decimal interest = money * (1 + this.InterestRate * months);
+            if (months < 6 && this.Customer == Customer.Individual)
             {
                 return 0;
             }
-            return money * (1 + this.InterestRate * months);
-        }
-
-        public void Withdraw(decimal money)
-        {
-            this.Balance -= money;
+            else if (months < 12 && this.Customer == Customer.Company)
+            {
+                return interest / 2;
+            }
+            return interest;
         }
     }
 }

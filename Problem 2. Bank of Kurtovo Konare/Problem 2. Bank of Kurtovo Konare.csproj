@@ -45,6 +45,8 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Deposit.cs" />
     <Compile Include="IAccount.cs" />
+    <Compile Include="Loan.cs" />
+    <Compile Include="Mortgage.cs" />
     <Compile Include="_DemoBankKonare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
