@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>3751cc7c-d7c3-428e-b37f-40487e84b3fa</ProjectGuid>
+    <ProjectGuid>{7F410B22-0635-46D4-A385-3DC72A1C4CD3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Problem_2.Bank_of_Kurtovo_Konare</RootNamespace>
@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Deposit.cs" />
+    <Compile Include="IAccount.cs" />
+    <Compile Include="_DemoBankKonare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
